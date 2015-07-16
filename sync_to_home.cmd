@@ -1,3 +1,3 @@
 robocopy .\.emacs.d %HOME%\.emacs.d /mir
-copy /q .emacs %HOME%\.emacs
-copy /q .custom %HOME%\.custom
+copy /y .emacs %HOME%\.emacs
+copy /y .custom %HOME%\.custom

@@ -18,7 +18,10 @@ $RECYCLE.BIN/
 *.lnk
 
 # Emacs backup files
-*~
+**/*~
+
+# Emacs auto saves
+.emacs.d/auto-save-list/**
 
 # =========================
 # Operating System Files

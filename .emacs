@@ -2,9 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;   Paths   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq my-home (getenv "HOME"))
-
 (add-to-list 'load-path my-home)
-;(add-to-list 'load-path (concat my-home "/.emacs.d"))
 
 ;; Load up a custom file if it exists
 (setq custom-file "~/.custom")
@@ -40,7 +38,9 @@
 (require 'django-mode)
 (require 'django-snippets)
 ;(yas/load-directory (concat my-home "django-mode/snippets")
-(add-to-list 'auto-mode-alist '("\\.djhtml$" . django-html-mode))
+
+; Use web-mode for django template (.djhtml) files
+(add-to-list 'auto-mode-alist '("\\.djhtml$" . web-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;   CEDET   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -7,14 +7,70 @@
  '(c-basic-offset 2)
  '(c-default-style "user")
  '(c-electric-pound-behavior (quote (alignleft)))
- '(c-mode-common-hook (quote ((lambda nil (setq comment-column default-c-comment-column) (setq fill-column 80) (auto-fill-mode 1)))))
- '(c-mode-hook (quote ((lambda nil (setq comment-start "// ") (setq comment-end "")))))
+ '(c-mode-common-hook
+   (quote
+    ((lambda nil
+       (setq comment-column default-c-comment-column)
+       (setq fill-column 80)
+       (auto-fill-mode 1)))))
+ '(c-mode-hook
+   (quote
+    ((lambda nil
+       (setq comment-start "// ")
+       (setq comment-end "")))))
  '(c-offsets-alist (quote ((substatement-open . 0) (case-label . +))))
  '(c-tab-always-indent nil)
  '(column-number-mode t)
  '(compilation-scroll-output t)
  '(cperl-hairy t)
- '(doxymacs-function-comment-template (quote ((let ((next-func (doxymacs-find-next-func))) (if next-func (list (quote l) "/************************************************************************/" (quote >) (quote n) "/** " (quote >) (quote n) " * " (quote p) (quote >) (quote n) " * " (quote >) (quote n) (doxymacs-parm-tempo-element (cdr (assoc (quote args) next-func))) (unless (string-match (regexp-quote (cdr (assoc (quote return) next-func))) doxymacs-void-types) (quote (l " * " > n " * " (doxymacs-doxygen-command-char) "return " (p "Returns: ") > n))) " * " (quote >) (quote n) " *************************************************************************/" (quote >)) (progn (error "Can't find next function declaration.") nil))))))
+ '(doxymacs-function-comment-template
+   (quote
+    ((let
+         ((next-func
+           (doxymacs-find-next-func)))
+       (if next-func
+           (list
+            (quote l)
+            "/************************************************************************/"
+            (quote >)
+            (quote n)
+            "/** "
+            (quote >)
+            (quote n)
+            " * "
+            (quote p)
+            (quote >)
+            (quote n)
+            " * "
+            (quote >)
+            (quote n)
+            (doxymacs-parm-tempo-element
+             (cdr
+              (assoc
+               (quote args)
+               next-func)))
+            (unless
+                (string-match
+                 (regexp-quote
+                  (cdr
+                   (assoc
+                    (quote return)
+                    next-func)))
+                 doxymacs-void-types)
+              (quote
+               (l " * " > n " * "
+                  (doxymacs-doxygen-command-char)
+                  "return "
+                  (p "Returns: ")
+                  > n)))
+            " * "
+            (quote >)
+            (quote n)
+            " *************************************************************************/"
+            (quote >))
+         (progn
+           (error "Can't find next function declaration.")
+           nil))))))
  '(ecb-compile-window-height 0.2)
  '(ecb-compile-window-width (quote edit-window))
  '(ecb-display-image-icons-for-semantic-tags t)
@@ -24,7 +80,22 @@
  '(ecb-other-window-behavior (quote smart))
  '(ecb-other-window-jump-behavior (quote edit-and-compile))
  '(ecb-primary-secondary-mouse-buttons (quote mouse-1--C-mouse-1))
- '(ecb-source-path (quote (("c:/builds/p401/mcs1" "mcs1") ("c:/builds/p401/mcs2" "mcs2") ("c:/builds/p401/mcs3" "mcs3") ("c:/builds/p401/mdm9k" "mdm9k") ("c:/builds/p401/mdm9k2" "mdm9k2") ("c:/builds/p401/mdm9k3" "mdm9k3") ("c:/builds/p401/mdm9k4" "mdm9k4") ("c:/builds/p401/lte1" "lte1") ("c:/builds/p401/lte2" "lte2") ("c:/builds/p401/lte3" "lte3") ("c:/builds/p401/lte4" "lte4") ("e:/m7630a/abbqmraa1146" "7x30apps") ("e:/m7630a/aabqmram12044139" "7x30modem") ("c:/Builds/p401/scmm3" "scmm3"))))
+ '(ecb-source-path
+   (quote
+    (("c:/builds/p401/mcs1" "mcs1")
+     ("c:/builds/p401/mcs2" "mcs2")
+     ("c:/builds/p401/mcs3" "mcs3")
+     ("c:/builds/p401/mdm9k" "mdm9k")
+     ("c:/builds/p401/mdm9k2" "mdm9k2")
+     ("c:/builds/p401/mdm9k3" "mdm9k3")
+     ("c:/builds/p401/mdm9k4" "mdm9k4")
+     ("c:/builds/p401/lte1" "lte1")
+     ("c:/builds/p401/lte2" "lte2")
+     ("c:/builds/p401/lte3" "lte3")
+     ("c:/builds/p401/lte4" "lte4")
+     ("e:/m7630a/abbqmraa1146" "7x30apps")
+     ("e:/m7630a/aabqmram12044139" "7x30modem")
+     ("c:/Builds/p401/scmm3" "scmm3"))))
  '(ecb-tag-header-face (quote ecb-tag-header-face))
  '(ecb-tip-of-the-day nil)
  '(ecb-toggle-layout-sequence (quote ("left15" "left9")))
@@ -40,6 +111,12 @@
  '(perl-continued-statement-offset 2)
  '(perl-indent-level 2)
  '(py-shell-name "c:\\utils\\Python27\\python")
+ '(safe-local-variable-values
+   (quote
+    ((python-shell-prompt-output-regexp . "Out\\[[0-9]+\\]: ")
+     (python-shell-prompt-regexp . "In \\[[0-9]+\\]: ")
+     (python-shell-interpreter-args . "~/GitHub/Patient-Portal/manage.py shell")
+     (python-shell-interpreter . "python"))))
  '(semanticdb-project-roots (quote ("c:/builds/p401/mcs1")))
  '(show-paren-mode t nil (paren))
  '(tool-bar-mode nil))

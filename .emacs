@@ -4,7 +4,7 @@
 (setq my-home (getenv "HOME"))
 
 (add-to-list 'load-path my-home)
-(add-to-list 'load-path (concat my-home "/.emacs.d"))
+;(add-to-list 'load-path (concat my-home "/.emacs.d"))
 
 ;; Load up a custom file if it exists
 (setq custom-file "~/.custom")
@@ -30,6 +30,17 @@
 
 ;; Always indent after a newline
 (define-key c-mode-base-map "\C-M" 'newline-and-indent)
+
+;; Setup YASnippet
+(require 'yasnippet)
+(yas-global-mode 1)
+
+;; Django
+(require 'django-html-mode)
+(require 'django-mode)
+(require 'django-snippets)
+;(yas/load-directory (concat my-home "django-mode/snippets")
+(add-to-list 'auto-mode-alist '("\\.djhtml$" . django-html-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;   CEDET   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

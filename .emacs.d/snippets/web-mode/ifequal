@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+# key: ifeq
+# name: ifequal
+# contributor: Ed Johnson <edwin_n_johnson@yahoo.com>
+# --
+{% ifequal $(1:Var1} $(2:Var2} %}
+
+{% else %}
+
+{% endifequal %}

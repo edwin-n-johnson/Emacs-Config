@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+# key: ifne
+# name: ifnotequal
+# contributor: Ed Johnson <edwin_n_johnson@yahoo.com>
+# --
+{% ifnotequal $(1:Var1} $(2:Var2} %}
+
+{% else %}
+
+{% endifnotequal %}

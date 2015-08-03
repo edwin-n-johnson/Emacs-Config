@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+# key: if
+# name: if
+# contributor: Ed Johnson <edwin_n_johnson@yahoo.com>
+# --
+{% if $(1:IfCondition} %}
+
+{% else %}
+
+{% endif %}

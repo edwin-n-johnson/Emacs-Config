@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+# key: for
+# name: for
+# contributor: Ed Johnson <edwin_n_johnson@yahoo.com>
+# --
+{% if $(1:ItemVar} in ${2:ArrayVar) %}
+
+{% empty %}
+
+{% endfor %}

@@ -4,7 +4,7 @@
 # contributor: Ed Johnson <edwin_n_johnson@yahoo.com>
 # --
 {% if $(1:ItemVar} in ${2:ArrayVar) %}
-
+$0
 {% empty %}
 
 {% endfor %}

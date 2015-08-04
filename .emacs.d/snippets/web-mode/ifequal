@@ -3,8 +3,8 @@
 # name: ifequal
 # contributor: Ed Johnson <edwin_n_johnson@yahoo.com>
 # --
-{% ifequal $(1:Var1} $(2:Var2} %}
-
+{% ifequal ${1:Var1} ${2:Var2} %}
+$0
 {% else %}
 
 {% endifequal %}

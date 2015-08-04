@@ -3,4 +3,4 @@
 # name: include
 # contributor: Ed Johnson <edwin_n_johnson@yahoo.com>
 # --
-{% include $(1:Include) %}
+{% include ${1:Include} %}

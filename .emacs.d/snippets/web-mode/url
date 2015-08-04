@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
-# key: if
-# name: if
+# key: url
+# name: url
 # contributor: Ed Johnson <edwin_n_johnson@yahoo.com>
 # --
-{% if ${1:IfCondition} %}
-$0
-{% else %}
-
-{% endif %}
+{% url '${1:UrlName}' ${2:Variable} %}

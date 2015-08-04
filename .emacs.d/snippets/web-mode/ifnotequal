@@ -3,8 +3,8 @@
 # name: ifnotequal
 # contributor: Ed Johnson <edwin_n_johnson@yahoo.com>
 # --
-{% ifnotequal $(1:Var1} $(2:Var2} %}
-
+{% ifnotequal ${1:Var1} ${2:Var2} %}
+$0
 {% else %}
 
 {% endifnotequal %}
